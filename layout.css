@@ -170,7 +170,7 @@ header p {
     border-radius: 4em;
     transition: 0.5s;
     color: #fff;
-    background: #2506ad;
+    background: hsl(224, 81%, 48%);
     box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
     font-family: "Nunito", sans-serif;
   }
@@ -241,4 +241,59 @@ header p {
         transform: translateY(0px);
     }
   }
+  .content1 span{
+    position: relative;
+  }
+  .content1 span::before{
+    content: "IT Student";
+    color: rgb(219, 8, 8);
+    animation: words 20s infinite;
+  }
+  .content1 span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: white;
+    border-left: 2px solid #262A56;
+    right: -8px;
+    animation: cursor .8s infinite, typings 20s steps(14) infinite;
+  }
+  @keyframes cursor{
+    to{
+      border-left: 2px solid #262A56;
+    }
+  }
+  @keyframes words{
+    0%,20%{
+      content: "IT Student";
+    }
+    21%,40%{
+      content: "IT Student";
+    }
+    41%,60%{
+      content: "IT Student";
+    }
+    61%,80%{
+      content: "IT Student";
+    }
+    81%,100%{
+      content: "IT Student";
+    }
+  }
+  @keyframes typings{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%,90%{
+      width: calc(100% + 8px);
+    }
+}
+.icon2 a:hover{
+  color: gray;
+  background-color: bisque;
+}
+.icon2 a.icon1:hover{
   
+  background-color: black;
+}
